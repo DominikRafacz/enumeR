@@ -11,6 +11,4 @@
 }
 \details{
 @param enum_type Object of class enum_type
-
-@export
 }
