@@ -4,7 +4,7 @@
 #'
 #'  @export
 
-enum_index <- function(enum_value) {
+get_enum_index <- function(enum_value) {
   stopifnot(is.enum_value(enum_value))
-  attr(enum_value, "index")
+  base::"$"(enum_value, index)
 }
