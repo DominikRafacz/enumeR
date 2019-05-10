@@ -5,7 +5,16 @@
 #'  @export
 
 is.enum_value <- function(object) {
-  if(class(object) == "enum_value" && is.integer(attr(object, "index")) && attr(object, "index") > 0) {
+  if(class(object) == "enum_value" &&
+     !any(is.null(object$type_name),
+          is.null(object$value_name),
+          is.null(object$index)) &&
+     all(is.character(object$type_name),
+         is.character(object$value_name),
+         is.integer(object$index)) &&
+     all(length(object$type_name) == 1,
+         length(object$value_name) == 1,
+         length(object$index == 1))){
     return(TRUE)
   }
   return(FALSE)
