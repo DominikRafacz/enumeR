@@ -5,14 +5,14 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "1586104187",
     "id" : "F2A0DC61",
-    "lastKnownWriteTime" : 1557332158,
-    "last_content_update" : 1557332158492,
+    "lastKnownWriteTime" : 1557401243,
+    "last_content_update" : 1557401243750,
     "path" : "~/git/enumeR/R/enum_type.R",
     "project_path" : "R/enum_type.R",
     "properties" : {
-        "cursorPosition" : "3,2",
+        "cursorPosition" : "9,42",
         "scrollLine" : "0"
     },
     "relative_order" : 1,

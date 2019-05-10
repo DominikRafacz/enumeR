@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557398688160.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1025214011",
+    "id" : "96B29F92",
+    "lastKnownWriteTime" : 1557398797,
+    "last_content_update" : 1557398797525,
+    "path" : "~/git/enumeR/R/is.enum_type.R",
+    "project_path" : "R/is.enum_type.R",
+    "properties" : {
+        "cursorPosition" : "10,30",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -9,5 +9,5 @@
 print.enum_type <- function(enum_type) {
   cat("Enum type: ", enum_type$type_name,
       "\nValues:\n")
-  lapply(base::"$"(enum_type, values), print)
+  print(enum_type$values)
 }

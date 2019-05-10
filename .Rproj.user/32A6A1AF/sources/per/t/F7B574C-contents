@@ -1,8 +1,10 @@
-#'  @title Coerce to an Enum Type
+#'  @title Coerce to an enum type
 #'
 #'  @description Functions to check if an object is an enum type, or coerce it if possible.
 #'
 #'  @param x any R object
+#'
+#'  @return Object of class \code{\link{enum_type}}
 #'
 #'  @export
 

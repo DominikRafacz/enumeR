@@ -1,0 +1,83 @@
+#warning! calling enum_type without assignment to variable returns "anonymus" enum - what should we do?
+planet <- enum_type(c("MERCURE", #field value
+                      "VENUS",
+                      "EARTH",
+                      "MARS",
+                      "JUPITER",
+                      "SATURN",
+                      "URANUS",
+                      "NEPTUNE"),
+                    #this fields are private, to get access from outside you need to write a function
+                    mass = c(
+                      12123,
+                      1243124,
+                      412414321,
+                      14124124,
+                      21431241432,
+                      1324123,
+                      12412341,
+                      4124312
+                    ),
+                    radius = c(
+                      2222,
+                      222,
+                      22222,
+                      22221,
+                      1111,
+                      11111,
+                      1111,
+                      11111
+                    ))
+
+#returns enum_value
+some_planet <- planet[2]
+some_planet <- planet[[2]]
+some_planet <- planet[["VENUS"]]
+some_planet <- planet["VENUS"]
+some_planet <- planet$VENUS
+
+# do we need this and other similliar?
+some_planets <- planet[5:7] # returns list of enum_values
+
+#adding functions (this allows access to private fields)
+#it could be discussible if it isn't better to just write function, but this can be done by
+#package author
+
+#methods should be deparsed inside "add_enum_method"
+add_enum_method(planet, surface_gravity = function(planet) {
+  6.67300e-11 * mass / radius^2
+})
+
+add_enum_method(planet, how_do_you_feel = function(planet) {
+  switch(value, #similarry, could be done with "index"
+         MERCURE = "it's too hot! no! it's too cold!",
+         VENUS = "so many women here",
+         EARTH = "typical",
+         MARS = "dusty!!!",
+         JUPITER = "cloudy!",
+         SATURN = "rich!",
+         URANUS = "wet!",
+         NEPTUNE = "more wet!")
+}, override = TRUE) #override argument overrides function, if exists; default - FALSE
+
+
+#calling enum methods - should give the same answer:
+planet%.%surface_gravity("VENUS")
+planet%.%surface_gravity(VENUS)
+planet%.%surface_gravity(2)
+planet%.%surface_gravity(some_planet)
+
+#per analogy
+planet%.%how_do_you_feel(some_planet)
+#...
+
+#other functions and usages:
+get_enum_values(planet) #returns list of enum_values
+strange_planet <- copy_enum(planet) # creates enum_type with values as planet, functions as planet, but name as strange_planet
+switch(planet,
+       MERCURE = 2121 #....
+       )
+
+as.character(planet) #returns values
+as.character(some_planet) # returns single value
+as.integer(planet$EARTH, planet$JUPITER) # returns indicies - maybe it's better to use it instead of enum_index?

@@ -5,17 +5,17 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "135693713",
     "id" : "D17FADD3",
-    "lastKnownWriteTime" : 1557332190,
-    "last_content_update" : 1557332190314,
+    "lastKnownWriteTime" : 1557396700,
+    "last_content_update" : 1557396700835,
     "path" : "~/git/enumeR/R/print.enum_type.R",
     "project_path" : "R/print.enum_type.R",
     "properties" : {
-        "cursorPosition" : "6,11",
+        "cursorPosition" : "13,0",
         "scrollLine" : "0"
     },
-    "relative_order" : 3,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"

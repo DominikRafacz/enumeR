@@ -2,7 +2,7 @@
 % Please edit documentation in R/as.enum_type.R
 \name{as.enum_type}
 \alias{as.enum_type}
-\title{@title Coerce to an Enum Type}
+\title{@title Coerce to an enum type}
 \usage{
 as.enum_type(x)
 }
@@ -11,6 +11,8 @@ as.enum_type(x)
 }
 \details{
 @param x any R object
+
+@return Object of class \code{\link{enum_type}}
 
 @export
 }

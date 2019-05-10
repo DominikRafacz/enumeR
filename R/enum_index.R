@@ -1,6 +1,10 @@
-#'  @title TEMPORARRY DOCUMENTATION
+#'  @title Get Enum Index
 #'
-#'  @description TEMPORARY DOCUMENTATION
+#'  @description Extracts `index` attribute value of passed `enum_value`.
+#'
+#'  @param enum_value object of class `enum_value`
+#'
+#'  @return integer index of
 #'
 #'  @export
 
