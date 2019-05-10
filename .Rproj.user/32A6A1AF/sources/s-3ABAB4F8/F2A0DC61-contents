@@ -21,7 +21,7 @@ enum_type <- function(type_name, values_names, ...) {
   if(length(fields) == 0) {
     fields_names <- NULL
   } else {
-    fileds_names <- names(fields)
+    fields_names <- names(fields)
   }
 
   new_type <- list(type_name = type_name,

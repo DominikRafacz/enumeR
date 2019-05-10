@@ -2,13 +2,17 @@
 % Please edit documentation in R/enum_index.R
 \name{get_enum_index}
 \alias{get_enum_index}
-\title{@title TEMPORARRY DOCUMENTATION}
+\title{@title Get Enum Index}
 \usage{
 get_enum_index(enum_value)
 }
 \description{
-@description TEMPORARY DOCUMENTATION
+@description Extracts `index` attribute value of passed `enum_value`.
 }
 \details{
+@param enum_value object of class `enum_value`
+
+@return integer index of
+
 @export
 }
