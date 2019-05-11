@@ -11,7 +11,7 @@ is.enum_type(object)
  \code{"enum_type"}, then checks if all necessary fields are not \code{null}, namely
  \code{type_name} and \code{values}, and whether \code{type_name} is a singular
  character vector. Next, checks if \code{fields_names} is a character vector or \code{null}.
- Lastly, all values need to be unique and proper \code{\link{enum_value}} objects.
+ Lastly, all values need to be unique and proper \code{enum_value} objects.
 }
 \details{
 @return \code{TRUE} if the object passed all tests described above, \code{FALSE} otherwise.

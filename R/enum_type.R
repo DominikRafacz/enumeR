@@ -10,6 +10,7 @@
 
 enum_type <- function(type_name, values_names, ...) {
   fields <- as.list(match.call(expand.dots = FALSE)$`...`)
+  fields <- lapply(fields, eval)
   n <- length(values_names)
 
   stopifnot(is.character(type_name))
@@ -24,14 +25,18 @@ enum_type <- function(type_name, values_names, ...) {
     fields_names <- names(fields)
   }
 
+  methods_env <- new.env()
+
   new_type <- list(type_name = type_name,
                    values_names = values_names,
                    fields_names = fields_names,
                    values = lapply(1L:n,
                        function(index) enum_value(enum_type = type_name,
+                                                  methods_enviroment = methods_env,
                                                   value_name = values_names[index],
                                                   index = index,
-                                                  lapply(fields, function(field) eval(field[[i]])))))
+                                                  lapply(fields, function(field) field[[index]]))),
+                   methods_enviroment = methods_env)
   names(new_type$values) <- values_names
   class(new_type) <- "enum_type"
   new_type

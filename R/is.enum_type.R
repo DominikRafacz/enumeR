@@ -11,15 +11,16 @@
 #'  @export
 
 is.enum_type <- function(object) {
-  "$" <- base::"$"
   if("enum_type" %in% class(object) &&
-     !any(is.null(object$type_name),
-          is.null(object$values)) &&
-     is.character(object$type_name) &&
-     length(object$type_name) == 1 &&
-     (is.null(object$fields_names) ||
-      is.character(object$fields_names))) {
-    values <- object$values
+     !any(is.null(object[["type_name"]]),
+          is.null(object[["values"]]),
+          is.null(object[["methods_enviroment"]])) &&
+     is.character(object[["type_name"]]) &&
+     is.environment(object[["methods_enviroment"]]) &&
+     length(object[["type_name"]]) == 1 &&
+     (is.null(object[["fields_names"]]) ||
+      is.character(object[["fields_names"]]))) {
+    values <- object[["values"]]
     n <- length(values)
     if (length(unique(values)) == n &&
         all(unlist(lapply(values, is.enum_value)))) {
