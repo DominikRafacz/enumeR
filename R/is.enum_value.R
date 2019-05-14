@@ -9,11 +9,11 @@ is.enum_value <- function(object) {
      !any(is.null(object$type_name),
           is.null(object$value_name),
           is.null(object$index),
-          is.null(object$methods_enviroment)) &&
+          is.null(object$methods_env)) &&
      all(is.character(object$type_name),
          is.character(object$value_name),
          is.integer(object$index),
-         is.environment(object$methods_enviroment)) &&
+         is.environment(object$methods_env)) &&
      all(length(object$type_name) == 1,
          length(object$value_name) == 1,
          length(object$index == 1))){

@@ -14,9 +14,9 @@ is.enum_type <- function(object) {
   if("enum_type" %in% class(object) &&
      !any(is.null(object[["type_name"]]),
           is.null(object[["values"]]),
-          is.null(object[["methods_enviroment"]])) &&
+          is.null(object[["methods_env"]])) &&
      is.character(object[["type_name"]]) &&
-     is.environment(object[["methods_enviroment"]]) &&
+     is.environment(object[["methods_env"]]) &&
      length(object[["type_name"]]) == 1 &&
      (is.null(object[["fields_names"]]) ||
       is.character(object[["fields_names"]]))) {
