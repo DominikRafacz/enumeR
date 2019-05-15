@@ -4,7 +4,7 @@
 #'
 #' @param enum_value object of class `enum_value` or list of such objects with the same `enum_type`
 #'
-#' @return integer index of `enum_value` or named vector of integers coresponding to  values in list
+#' @return integer index of `enum_value` or named vector of integers coresponding to values in list
 #'
 #' @export
 

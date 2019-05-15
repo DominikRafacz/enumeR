@@ -38,6 +38,7 @@ enum_type <- function(type_name, values_names, ...) {
                                                   lapply(fields, function(field) field[[index]]))),
                    methods_env = methods_env)
   names(new_type$values) <- values_names
+  new_type$values <- enum_list(new_type$values)
   class(new_type) <- "enum_type"
   new_type
 }

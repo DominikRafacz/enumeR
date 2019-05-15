@@ -17,5 +17,5 @@ sample_enum <- function(enum_type, size, replace = FALSE, weight = NULL) {
   if (!is.null(weight)) {
     weight <- weight/sum(weight)
   }
-  sample(enum_type[["values"]], size, replace, weight)
+  enum_list(sample(enum_type[["values"]], size, replace, weight))
 }
