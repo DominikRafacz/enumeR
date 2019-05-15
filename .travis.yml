@@ -6,6 +6,11 @@ r:
   - release
   - devel
 
+r_packages:
+  - covr
+
+warnings_are_errors: false
+
 notifications:
   email:
     on_success: change
