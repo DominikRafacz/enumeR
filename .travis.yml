@@ -1,0 +1,15 @@
+language: r
+cache: packages
+
+r:
+  - oldrel
+  - release
+  - devel
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+
+after_success:
+- Rscript -e 'covr::codecov()'
