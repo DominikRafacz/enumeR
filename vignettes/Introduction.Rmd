@@ -1,0 +1,70 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This vignette will introduce you to basic functionalities of `enumeR` package.
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(enumeR)
+```
+
+First we create some `enum_type` object. It represents a class with finite number of possible values - similliar to enums from other languages like `C++` or `Java`. During construction of an object besides names of values you can specify values of own fields that will be kept inside values. For example:
+
+```{r example}
+season_of_year <- enum_type("season_of_year", 
+                            c("SPRING", "SUMMER", "AUTUMN", "WINTER"),
+                            min_temperature = c(-13, 7, -6, -20),
+                            max_temperature = c(20, 32, 18, 12))
+
+print(season_of_year)
+```
+
+Now you can access values of this type:
+
+```{r access}
+my_favourite_seasons <- season_of_year[c(1,4)]
+my_hated_seasons <- season_of_year[c("SUMMER","AUTUMN")]
+holiday_season <- season_of_year$SUMMER
+```
+
+... but cannot modify it:
+```{r modif, error=TRUE}
+season_of_year$SUMMER <- "something"
+```
+
+You can also choose a random subset:
+```{r sample}
+sample_seasons <- sample_enum(season_of_year)
+```
+
+Objects have thier own classes, which can be checked:
+```{r class}
+class(season_of_year)
+class(holiday_season)
+is.enum_type(season_of_year)
+is.enum_value(holiday_season)
+```
+
+You can add methods to `enum_type` which will be accessing its fields. You can access these fields using their names with dot before it. Thus it's not recommended to add fields which names begin with dot.
+```{r methods}
+add_enum_methods(season_of_year,
+                 temperature_diff = function() {
+                   .max_temperature - .min_temperature
+                 })
+
+get_enum_method(holiday_season, temperature_diff)()
+
+```
