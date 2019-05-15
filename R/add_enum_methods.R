@@ -1,8 +1,8 @@
-#'  @title TEMPORARRY DOCUMENTATION
+#' TEMPORARRY DOCUMENTATION
 #'
-#'  @description TEMPORARY DOCUMENTATION
+#' @description TEMPORARY DOCUMENTATION
 #'
-#'  @export
+#' @export
 add_enum_methods <- function(enum_type, ...) {
   added_methods <- match.call(expand.dots = FALSE)$`...`
   n <- length(added_methods)

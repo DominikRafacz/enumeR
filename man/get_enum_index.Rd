@@ -2,17 +2,16 @@
 % Please edit documentation in R/enum_index.R
 \name{get_enum_index}
 \alias{get_enum_index}
-\title{@title Get Enum Index}
+\title{Get Enum Index}
 \usage{
 get_enum_index(enum_value)
 }
-\description{
-@description Extracts `index` attribute value of passed `enum_value`.
+\arguments{
+\item{enum_value}{object of class `enum_value` or list of such objects with the same `enum_type`}
 }
-\details{
-@param enum_value object of class `enum_value` or list of such objects with the same `enum_type`
-
-@return integer index of `enum_value` or named vector of integers coresponding to  values in list
-
-@export
+\value{
+integer index of `enum_value` or named vector of integers coresponding to  values in list
+}
+\description{
+Extracts `index` attribute value of passed `enum_value`.
 }

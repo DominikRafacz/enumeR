@@ -1,12 +1,12 @@
-#'  @title Coerce to an enum type
+#' Coerce to an enum type
 #'
-#'  @description Functions to check if an object is an enum type, or coerce it if possible.
+#' @description Functions to check if an object is an enum type, or coerce it if possible.
 #'
-#'  @param x any R object
+#' @param x any R object
 #'
-#'  @return Object of class \code{\link{enum_type}}
+#' @return Object of class \code{\link{enum_type}}
 #'
-#'  @export
+#' @export
 
 as.enum_type <- function(x) {
   stopifnot(!is.null(x), length(x) > 0)

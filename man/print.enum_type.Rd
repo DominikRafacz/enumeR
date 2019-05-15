@@ -2,15 +2,13 @@
 % Please edit documentation in R/print.enum_type.R
 \name{print.enum_type}
 \alias{print.enum_type}
-\title{@title Print enum_type}
+\title{Print enum_type}
 \usage{
 \method{print}{enum_type}(enum_type)
 }
-\description{
-@description Pretty prints enum_type object. Overloads default print.
+\arguments{
+\item{enum_type}{Object of class enum_type}
 }
-\details{
-@param enum_type Object of class enum_type
-
-@export
+\description{
+Pretty prints enum_type object. Overloads default print.
 }

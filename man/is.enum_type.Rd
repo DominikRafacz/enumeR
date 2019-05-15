@@ -2,19 +2,17 @@
 % Please edit documentation in R/is.enum_type.R
 \name{is.enum_type}
 \alias{is.enum_type}
-\title{@title Test if the object is an enum type}
+\title{Test if the object is an enum type}
 \usage{
 is.enum_type(object)
 }
-\description{
-@description This function checks class of passed object. If vector of classes contains
- \code{"enum_type"}, then checks if all necessary fields are not \code{null}, namely
- \code{type_name} and \code{values}, and whether \code{type_name} is a singular
- character vector. Next, checks if \code{fields_names} is a character vector or \code{null}.
- Lastly, all values need to be unique and proper \code{enum_value} objects.
+\value{
+\code{TRUE} if the object passed all tests described above, \code{FALSE} otherwise.
 }
-\details{
-@return \code{TRUE} if the object passed all tests described above, \code{FALSE} otherwise.
-
-@export
+\description{
+This function checks class of passed object. If vector of classes contains
+\code{"enum_type"}, then checks if all necessary fields are not \code{null}, namely
+\code{type_name} and \code{values}, and whether \code{type_name} is a singular
+character vector. Next, checks if \code{fields_names} is a character vector or \code{null}.
+Lastly, all values need to be unique and proper \code{enum_value} objects.
 }

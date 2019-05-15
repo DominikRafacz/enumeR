@@ -1,8 +1,9 @@
-#'  @title TEMPORARRY DOCUMENTATION
+#' TEMPORARRY DOCUMENTATION
 #'
-#'  @description TEMPORARY DOCUMENTATION
+#' @description TEMPORARY DOCUMENTATION
 #'
-#'  @export
+#' @export
+
 get_enum_method <- function(enum_value, method) {
   method_name <- as.character(substitute(method))
   methods_names <- names(enum_value$methods_env)

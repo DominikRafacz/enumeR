@@ -2,13 +2,10 @@
 % Please edit documentation in R/apply_enum_method.R
 \name{apply_enum_method}
 \alias{apply_enum_method}
-\title{@title TEMPORARRY DOCUMENTATION}
+\title{TEMPORARRY DOCUMENTATION}
 \usage{
 apply_enum_method(enum_value, method, ...)
 }
 \description{
-@description TEMPORARY DOCUMENTATION
-}
-\details{
-@export
+TEMPORARY DOCUMENTATION
 }

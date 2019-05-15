@@ -2,14 +2,10 @@
 % Please edit documentation in R/add_enum_methods.R
 \name{add_enum_methods}
 \alias{add_enum_methods}
-\title{@title TEMPORARRY DOCUMENTATION}
+\title{TEMPORARRY DOCUMENTATION}
 \usage{
 add_enum_methods(enum_type, ...)
 }
 \description{
-@description TEMPORARY DOCUMENTATION
-}
-\details{
-@importFrom stringi, stri_match_first_regex
- @export
+TEMPORARY DOCUMENTATION
 }

@@ -2,17 +2,17 @@
 % Please edit documentation in R/enum_type.R
 \name{enum_type}
 \alias{enum_type}
-\title{@title Enum type}
+\title{Enum type}
 \usage{
 enum_type(type_name, values_names, ...)
 }
-\description{
-@description Creates new enum type.
-}
-\details{
-@param type_name Character vector of length 1. Name of the type. Type  name will be referenced by this value
- @param value_names Character vector of positive length. Possible names of enum_values (instances)
- @param ... Optional other fields that are used during constructing enum_values
+\arguments{
+\item{type_name}{Character vector of length 1. Name of the type. Type  name will be referenced by this value}
 
-@export
+\item{...}{Optional other fields that are used during constructing enum_values}
+
+\item{value_names}{Character vector of positive length. Possible names of enum_values (instances)}
+}
+\description{
+Creates new enum type.
 }
