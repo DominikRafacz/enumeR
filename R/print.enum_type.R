@@ -9,5 +9,5 @@
 print.enum_type <- function(enum_type) {
   cat("Enum type: ", enum_type[["type_name"]],
       "\n\nValues:\n")
-  sapply(enum_type[["values"]], print)
+  invisible(sapply(enum_type[["values"]], print))
 }
