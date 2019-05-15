@@ -15,9 +15,9 @@ get_enum_method <- function(enum_value, method) {
   variables_w_d <- paste(".", variables, sep = "")
   inds <- match(variables_w_d, names(formals(method)))
   formals(method)[inds] <- enum_value[-c(1,2)]
-  ret <- function() {
-    method()
+  ret <- function(...) {
+    method(...)
   }
-  formals(ret) <- formals(method)[-inds]
+  #formals(ret) <- formals(method)[-inds]
   ret
 }
