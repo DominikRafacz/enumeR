@@ -1,8 +1,8 @@
-#'  @title TEMPORARRY DOCUMENTATION
+#' TEMPORARRY DOCUMENTATION
 #'
-#'  @description TEMPORARY DOCUMENTATION
+#' @description TEMPORARY DOCUMENTATION
 #'
-#'  @export
+#' @export
 
 is.enum_value <- function(object) {
   if(class(object) == "enum_value" &&

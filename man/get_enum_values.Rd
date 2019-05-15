@@ -2,13 +2,10 @@
 % Please edit documentation in R/get_enum_values.R
 \name{get_enum_values}
 \alias{get_enum_values}
-\title{@title TEMPORARRY DOCUMENTATION}
+\title{TEMPORARRY DOCUMENTATION}
 \usage{
 get_enum_values(enum_type)
 }
 \description{
-@description TEMPORARY DOCUMENTATION
-}
-\details{
-@export
+TEMPORARY DOCUMENTATION
 }

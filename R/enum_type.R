@@ -1,12 +1,12 @@
-#'  @title Enum type
+#' Enum type
 #'
-#'  @description Creates new enum type.
+#' @description Creates new enum type.
 #'
-#'  @param type_name Character vector of length 1. Name of the type. Type  name will be referenced by this value
-#'  @param value_names Character vector of positive length. Possible names of enum_values (instances)
-#'  @param ... Optional other fields that are used during constructing enum_values
+#' @param type_name Character vector of length 1. Name of the type. Type  name will be referenced by this value
+#' @param value_names Character vector of positive length. Possible names of enum_values (instances)
+#' @param ... Optional other fields that are used during constructing enum_values
 #'
-#'  @export
+#' @export
 
 enum_type <- function(type_name, values_names, ...) {
   fields <- as.list(match.call(expand.dots = FALSE)$`...`)

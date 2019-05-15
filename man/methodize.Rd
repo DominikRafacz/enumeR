@@ -9,7 +9,3 @@ methodize(enum_type, method)
 \description{
 @description TEMPORARY DOCUMENTATION
 }
-\details{
-@importFrom stringi, stri_match_first_regex
- @importFrom stringi, stri_replace_first_regex
-}

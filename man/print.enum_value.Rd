@@ -2,13 +2,10 @@
 % Please edit documentation in R/print.enum_value.R
 \name{print.enum_value}
 \alias{print.enum_value}
-\title{@title TEMPORARRY DOCUMENTATION}
+\title{TEMPORARRY DOCUMENTATION}
 \usage{
 \method{print}{enum_value}(enum_value)
 }
 \description{
-@description TEMPORARY DOCUMENTATION
-}
-\details{
-@export
+TEMPORARY DOCUMENTATION
 }

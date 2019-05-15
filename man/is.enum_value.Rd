@@ -2,13 +2,10 @@
 % Please edit documentation in R/is.enum_value.R
 \name{is.enum_value}
 \alias{is.enum_value}
-\title{@title TEMPORARRY DOCUMENTATION}
+\title{TEMPORARRY DOCUMENTATION}
 \usage{
 is.enum_value(object)
 }
 \description{
-@description TEMPORARY DOCUMENTATION
-}
-\details{
-@export
+TEMPORARY DOCUMENTATION
 }

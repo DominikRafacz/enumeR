@@ -1,10 +1,10 @@
-#'  @title Print enum_type
+#' Print enum_type
 #'
-#'  @description Pretty prints enum_type object. Overloads default print.
+#' @description Pretty prints enum_type object. Overloads default print.
 #'
-#'  @param enum_type Object of class enum_type
+#' @param enum_type Object of class enum_type
 #'
-#'  @export
+#' @export
 
 print.enum_type <- function(enum_type) {
   cat("Enum type: ", enum_type[["type_name"]],

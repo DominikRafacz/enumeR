@@ -1,8 +1,8 @@
-#'  @title TEMPORARRY DOCUMENTATION
+#' TEMPORARRY DOCUMENTATION
 #'
-#'  @description TEMPORARY DOCUMENTATION
+#' @description TEMPORARY DOCUMENTATION
 #'
-#'  @export
+#' @export
 get_enum_values <- function(enum_type) {
   stopifnot(is.enum_type(enum_type))
   enum_type[["values"]]
