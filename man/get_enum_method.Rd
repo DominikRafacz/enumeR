@@ -4,7 +4,7 @@
 \alias{get_enum_method}
 \title{@title TEMPORARRY DOCUMENTATION}
 \usage{
-get_enum_method(enum_value, method)
+get_enum_method(enum_val, method)
 }
 \description{
 @description TEMPORARY DOCUMENTATION
