@@ -9,7 +9,7 @@
 #' @export
 
 get_enum_index <- function(enum_value) {
-  stopifnot(is.enum_value(enum_value) || (is.list(enum_value) && all(sapply(enum_value, is.enum_value))))
+  stopifnot(is.enum_value(enum_value))
   if(is.enum_value(enum_value)) {
     enum_value$index
   } else {

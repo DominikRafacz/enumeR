@@ -18,11 +18,13 @@ test_that("enum_types with no fields are created properly", {
   reference <- list(type_name = "animal",
                     values_names = c("DOG", "CAT", "COW"),
                     fields_names = NULL,
-                    values = list(DOG = enum_value("animal", temp, "DOG", 1),
-                                  CAT = enum_value("animal", temp, "CAT", 2),
-                                  COW = enum_value("animal", temp, "COW", 3)),
+                    values = list(DOG = enum_value("animal", temp, "DOG", 1L),
+                                  CAT = enum_value("animal", temp, "CAT", 2L),
+                                  COW = enum_value("animal", temp, "COW", 3L)),
                     methods_env = temp)
+  class(reference$values) <- c("list", "enum_list")
   class(reference) <- "enum_type"
+  #length.enum_type <- base::length
   expect_equal(object, reference)
 })
 
@@ -31,7 +33,7 @@ test_that("enum_values are recoginized as enum_values", {
   expect_true(is.enum_value(object))
 })
 
-test_that("enum_types are recoginized as enum_values", {
+test_that("enum_types are recoginized as enum_types", {
   object <- enum_type("animal",
                       c("DOG", "CAT", "COW"))
   expect_true(is.enum_type(object))
