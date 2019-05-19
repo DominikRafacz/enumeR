@@ -8,7 +8,7 @@ add_enum_methods <- function(enum_type, ...) {
   n <- length(added_methods)
   invisible(
     lapply(1:n, function(index) {
-      enum_type[["methods_env"]][[names(added_methods)[index]]] <- methodize(enum_type, eval(added_methods[[index]]))
+      enum_type[["methods_env"]]$methods_universal[[names(added_methods)[index]]] <- methodize(enum_type, eval(added_methods[[index]]))
     })
   )
 }

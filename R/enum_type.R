@@ -26,6 +26,8 @@ enum_type <- function(type_name, values_names, ...) {
   }
 
   methods_env <- new.env()
+  methods_env$methods_universal <- list()
+  methods_env$methods_switch <- list()
 
   new_type <- list(type_name = type_name,
                    values_names = values_names,

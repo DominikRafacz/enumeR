@@ -8,7 +8,7 @@ color_enum <- enum_type("color_enum",
 
 qu <- color_enum$QUEEN_BLUE
 
-test_that("adding field-based method with no parameters works", {
+test_that("adding universal method with no parameters works", {
   add_enum_methods(color_enum,
                    get_hex_color_w_index_name = function() {
                      paste0(.value_name,
@@ -19,7 +19,7 @@ test_that("adding field-based method with no parameters works", {
                             as.hexmode(.green),
                             as.hexmode(.blue))
                    })
-  object <- color_enum[["methods_env"]]$get_hex_color_w_index_name(qu$value_name,
+  object <- color_enum[["methods_env"]]$methods_universal$get_hex_color_w_index_name(qu$value_name,
                                                                    qu$index,
                                                                    qu$red,
                                                                    qu$green,
@@ -27,10 +27,10 @@ test_that("adding field-based method with no parameters works", {
   expect_equal(object, "QUEEN_BLUE 1 #437c90")
 })
 
-test_that("adding field-based method which does nothing with no parameters works", {
+test_that("adding universal method which does nothing with no parameters works", {
   add_enum_methods(color_enum,
                    do_nothing = function() {NULL})
-  object <- color_enum[["methods_env"]]$do_nothing(qu$value_name,
+  object <- color_enum[["methods_env"]]$methods_universal$do_nothing(qu$value_name,
                                                    qu$index,
                                                    qu$red,
                                                    qu$green,
@@ -38,12 +38,12 @@ test_that("adding field-based method which does nothing with no parameters works
   expect_equal(object, NULL)
 })
 
-test_that("adding field-based method with some parameters works", {
+test_that("adding universal method with some parameters works", {
   add_enum_methods(color_enum,
                    return_multiplicity_of_index = function(multiplicity) {
                      multiplicity * .index
                    })
-  object <- color_enum[["methods_env"]]$return_multiplicity_of_index(12,
+  object <- color_enum[["methods_env"]]$methods_universal$return_multiplicity_of_index(12,
                                                                      qu$value_name,
                                                                      qu$index,
                                                                      qu$red,
@@ -52,18 +52,17 @@ test_that("adding field-based method with some parameters works", {
   expect_equal(object, 12)
 })
 
-test_that("calling field-based method with no parameters works", {
+test_that("calling universal method with no parameters works", {
   object <- get_enum_method(qu, get_hex_color_w_index_name)()
   expect_equal(object, "QUEEN_BLUE 1 #437c90")
 })
 
-test_that("calling field-based method which does nothing with no parameters works", {
+test_that("calling universal method which does nothing with no parameters works", {
   object <- get_enum_method(qu, do_nothing)()
   expect_equal(object, NULL)
 })
 
-test_that("calling field-based method with some parameters works", {
-  skip("not implemented properly yet")
+test_that("calling universal method with some parameters works", {
   object <- get_enum_method(qu, return_multiplicity_of_index)(12)
   expect_equal(object, 12)
 })
